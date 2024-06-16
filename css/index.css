@@ -1,0 +1,7 @@
+canvas{
+  border: 2px solid darkgrey;
+  background-color: black;
+  border-radius: 16px;
+  width: 256px;
+  height: 256px;
+}
