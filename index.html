@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Nabir14">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Canvas-AI</title>
+</head>
+<body>
+	<h1>RenderAI</h1>
+	<p><strong>RenderAI</strong> is a scene generation tool which uses <strong>Google Gemini AI</strong> and <strong>Rendering API</strong> to generate user requested scenes.</p>
+	<br>
+	<h3>How To Use:</h3>
+	<ol>
+	  <li>Explain how you want your scene to look like. (Draw natural scenery)</li>
+	  <li>Select your preferred Rendering API</li>
+	  <ul>
+	    <li>HTML Canvas (2d)</li>
+	    <li>ThreeJS (3d)</li>
+	  </ul>
+	  <li>Click Generate Scene to generate your scene.</li>
+	</ol>
+	<h3>Scene Generation:</h3>
+	<div id="contentBody">
+	  <p>User Prompt:</p>
+	  <input id="textInputElement" type="text">
+	  <br>
+	  <p>Rendering API:</p>
+	  <select id="apiSelectionElement">
+	    <option value="1">HTML Canvas</option>
+	    <option value="2">ThreeJS</option>
+	  </select>
+	  <br>
+	  <button onclick="generateScene()">Generate Scene</button>
+	  <br>
+	  <canvas id="sceneCanvas"></canvas>
+	  <br>
+	  <p>Generated Code:</p>
+	  <input id="codeOutputElement" type="text">
+	</div>
+	<script type="importmap">
+  {
+    "imports": {
+      "@google/generative-ai": "https://esm.run/@google/generative-ai",
+      "three": "https://cdn.jsdelivr.net/npm/three@0.165.0/build/three.module.js",
+      "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.165.0/examples/jsm/"
+    }
+  }
+  </script>
+  <!-- ... Your HTML and CSS -->
+  <!-- Import @google/generative-ai, as shown above. -->
+  <script type="module" src="js/script.js"></script>
+</body>
+</html>
